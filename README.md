@@ -42,7 +42,6 @@ projects put together:
 
 * [WordPress] - Code is Poetry
 * [jQuery] - duh
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
 * [Font Awesome] - The iconic font designed for Bootstrap
 * [HTML5 Boilerplate] - Based on HTML5 Boilerplate front-end template
 * [BigGallery] - Enchances our WordPress gallery
@@ -54,13 +53,13 @@ projects put together:
 
 Changelog
 -------------------------------------------------------------------
-**v2.0 (2013-07-14)**
-
+**v1.2 (2013-11-05)**
+  - Upped the version
   - Ported [BigGallery] jQuery Plugin
   - Added [Microdata] for [SEO Purposes]
   - Ported [Font Awesome] icons
   - Minor Code cleanups
-  
+  - Flatter UI  
 
 **v1.0 (2012-08-10) Released**
 
@@ -77,7 +76,6 @@ MIT & GPL
 [@NorikDavtian]: http://twitter.com/NorikDavtian
 [@ArianKhosravi]: http://twitter.com/ArianKhosravi
 [BigGallery]: http://bigemployee.com/projects/big-gallery/
-[Twitter Bootstrap]: http://twitter.github.io/bootstrap/
 [Microdata]: http://www.w3.org/html/wg/drafts/microdata/master/
 [SEO Purposes]: https://support.google.com/webmasters/answer/176035?hl=en
 [WordPress]: http://wordpress.org
