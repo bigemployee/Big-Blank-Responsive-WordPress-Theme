@@ -1,13 +1,20 @@
 .htaccess
-wp-config.php
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/
-wp-content/backup-db/
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-sitemap.xml
-*.log
-wp-content/cache/
-wp-content/backups/
-sitemap.xml.gz
+.gitignore
+/nbproject/
+Thumbs.db
+
+# Add this ignore file to WP root if you want to ignore WordPress core files
+# Remove the hash to enable the ignore rule
+
+#wp-config.php
+#wp-content/uploads/
+#wp-content/blogs.dir/
+#wp-content/upgrade/
+#wp-content/backup-db/
+#wp-content/advanced-cache.php
+#wp-content/wp-cache-config.php
+#sitemap.xml
+#*.log
+#wp-content/cache/
+#wp-content/backups/
+#sitemap.xml.gz

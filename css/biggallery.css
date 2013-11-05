@@ -1,0 +1,160 @@
+.be-wrap:after,
+.be-slider:after,
+.be-thumb-wrap:after,
+.be-arrows:after,
+.be-caption:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+
+/* ===[ Slider ]=== */
+
+.be-wrap {
+    position: relative;
+    max-width: 100%;
+    margin: 0 0 25px;
+}
+
+.be-slide-bg { *zoom: 1 }
+
+.be-slider > li > a { display: block }
+
+.be-slider > li {
+    list-style: none;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 -100% 0 0;
+    padding: 0;
+    float: left;
+    position: relative;
+}
+
+    .be-slider > li > a {
+        padding: 0;
+        background: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+
+    .be-slider > li img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        -ms-interpolation-mode: bicubic;
+    }
+
+/* ===[ Thumbnails ]=== */
+
+.be-thumb-wrap { *zoom: 1 }
+
+    .be-thumb-wrap > a {
+        display: block;
+        float: left;
+        position: relative;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-backface-visibility: hidden; /* Hardware accelerate to prevent jumps on transition */
+    }
+
+        .be-thumb-wrap > a > img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            -ms-interpolation-mode: bicubic;
+        }
+
+.be-thumb-wrap > a:last-child { margin-right: 0!important }
+
+/* ===[ Arrows ]=== */
+
+.be-arrows .be-next,
+.be-arrows .be-prev { z-index: 1; }
+
+.be-arrows:hover .be-next,
+.be-arrows:hover .be-prev { z-index: 2; }
+
+/* ===[ Captions ]=== */
+
+.be-caption {
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+}
+
+.be-caption.be-top-left {
+    top: 0;
+    bottom: auto;
+}
+
+.be-caption.be-top-right {
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+}
+
+.be-caption.be-bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.be-caption.be-bottom-right {
+    right: 0;
+    left: auto;
+    border-bottom: none;
+    border-right: none;
+}
+
+.be-caption.be-top {
+    top: 0;
+    bottom: auto;
+    width: 100%!important;
+}
+
+.be-caption.be-bottom { width: 100%!important }
+
+.be-caption.be-left {
+    top: 0;
+    height: 100%;
+}
+
+.be-caption.be-right {
+    top: 0;
+    left: auto;
+    right: 0;
+    height: 100%;
+}
+
+/* ===[ Grid ]=== */
+
+.be-grid {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.be-gridlet {
+    position: absolute;
+    opacity: 1;
+}
+
+/* Optional - remove captions at smaller screen widths
+@media screen and (max-width: 480px) {
+	.be-caption { opacity: 0!important; }
+} 
+*/
