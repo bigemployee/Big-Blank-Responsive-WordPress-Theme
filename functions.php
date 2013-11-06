@@ -11,6 +11,10 @@
  * @since 1.0
  */
 
+if ( ! isset( $content_width ) )
+	$content_width = 980;
+
+
 add_action('after_setup_theme', 'be_setup');
 
 if (!function_exists('be_setup')) {
@@ -20,19 +24,27 @@ if (!function_exists('be_setup')) {
         load_theme_textdomain('betheme', get_template_directory() . '/languages');
 
         require(get_template_directory() . '/includes/theme-options.php');
-        /** @betodo: load theme's widgets */
-        /** @betodo: add widgets require widget file */
+        /** 
+         * Add custom theme Widgets 
+         * 
+         **/
         /** add menus register_nav_menu */
         register_nav_menus(array(
             'main_menu' => 'Main Menu',
             'footer_menu' => 'Footer Menu'
         ));
-        /** @betodo: add theme support (post-format, post-thumbnails, custom-background, custom-header, automatic-feed-links) */
-//        add_theme_support( 'post-formats', array( 'gallery', 'image', 'quote' , 'video' ) );
-
-        /** add default posts and comments RSS feed links to <head>. */
-        add_theme_support('automatic-feed-links');
-
+        
+        /** Add custom theme header, background, post formats, and etc... 
+         * http://codex.wordpress.org/Function_Reference/add_theme_support
+         * **/
+        
+	/*
+	 * This theme does not style the visual editor to resemble the theme style,
+	 * specifically font, colors, icons, and column width.
+         * Uncomment line below to add your own styles to the editor.
+	 */
+         add_editor_style( array( 'css/editor-style.css') );
+        
         // Switches default core markup for search form, comment form, and comments
         // to output valid HTML5.
         add_theme_support('html5', array('search-form', 'comment-form', 'comment-list'));
@@ -299,20 +311,20 @@ if (!function_exists('be_comments')) {
             <footer class="comment-meta">
                 <div class="comment-author vcard">
                     <?php if (0 != $args['avatar_size']) echo get_avatar($comment, $args['avatar_size']); ?>
-                    <?php printf(__('%s'), sprintf('<b class="fn">%s</b>', get_comment_author_link())); ?>
+                    <?php printf(__('%s', 'betheme'), sprintf('<b class="fn">%s</b>', get_comment_author_link())); ?>
                 </div><!-- .comment-author -->
 
                 <div class="comment-metadata">
                     <a href="<?php echo esc_url(get_comment_link($comment->comment_ID)); ?>">
                         <time datetime="<?php comment_time('c'); ?>">
-                            <?php printf(_x('%1$s at %2$s', '1: date, 2: time'), get_comment_date(), get_comment_time()); ?>
+                            <?php printf(_x('%1$s at %2$s', '1: date, 2: time', 'betheme'), get_comment_date(), get_comment_time()); ?>
                         </time>
                     </a>
-                    <?php edit_comment_link(__('Edit'), '<span class="edit-link"><i class="fa fa-pencil"></i>', '</span>'); ?>
+                    <?php edit_comment_link(__('Edit', 'betheme'), '<span class="edit-link"><i class="fa fa-pencil"></i>', '</span>', 'betheme'); ?>
                 </div><!-- .comment-metadata -->
 
                 <?php if ('0' == $comment->comment_approved) : ?>
-                    <p class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.'); ?></p>
+                    <p class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'betheme'); ?></p>
                 <?php endif; ?>
             </footer><!-- .comment-meta -->
 
