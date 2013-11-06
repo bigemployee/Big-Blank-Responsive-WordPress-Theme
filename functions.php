@@ -11,8 +11,8 @@
  * @since 1.0
  */
 
-if ( ! isset( $content_width ) )
-	$content_width = 980;
+if (!isset($content_width))
+    $content_width = 980;
 
 
 add_action('after_setup_theme', 'be_setup');
@@ -24,30 +24,29 @@ if (!function_exists('be_setup')) {
         load_theme_textdomain('betheme', get_template_directory() . '/languages');
 
         require(get_template_directory() . '/includes/theme-options.php');
-        /** 
+        /**
          * Add custom theme Widgets 
          * 
-         **/
+         * */
         /** add menus register_nav_menu */
         register_nav_menus(array(
-            'main_menu' => 'Main Menu',
-            'footer_menu' => 'Footer Menu'
+            'main_menu' => __('Main Menu', 'betheme'),
+            'footer_menu' => __('Footer Menu', 'betheme')
         ));
-        
+
         /** Add custom theme header, background, post formats, and etc... 
          * http://codex.wordpress.org/Function_Reference/add_theme_support
-         * **/
-        
-	/*
-	 * This theme does not style the visual editor to resemble the theme style,
-	 * specifically font, colors, icons, and column width.
+         * * */
+        /*
+         * This theme does not style the visual editor to resemble the theme style,
+         * specifically font, colors, icons, and column width.
          * Uncomment line below to add your own styles to the editor.
-	 */
-         add_editor_style( array( 'css/editor-style.css') );
-        
-	// Adds RSS feed links to <head> for posts and comments.
-	add_theme_support( 'automatic-feed-links' );
-        
+         */
+        add_editor_style(array('css/editor-style.css'));
+
+        // Adds RSS feed links to <head> for posts and comments.
+        add_theme_support('automatic-feed-links');
+
         // Switches default core markup for search form, comment form, and comments
         // to output valid HTML5.
         add_theme_support('html5', array('search-form', 'comment-form', 'comment-list'));
@@ -369,8 +368,12 @@ function be_footer_menu() {
 }
 
 function be_menu_fallback() {
-// please define menu
-    return;
+    return wp_nav_menu(array(
+                'theme_location' => 'main_menu',
+                'container' => 'nav',
+                'depth' => 2,
+                'container_id' => 'nav'
+            ));
 }
 
 class be_footer_menu_walker extends Walker_Nav_Menu {
@@ -509,7 +512,6 @@ function be_big_gallery($output, $attr) {
 }
 
 add_filter("post_gallery", "be_big_gallery", 10, 2);
-
 
 /**
  * A simple button shortcode, with option to pass link and additional class
