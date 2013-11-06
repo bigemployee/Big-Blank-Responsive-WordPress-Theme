@@ -494,7 +494,10 @@ function be_big_gallery($output, $attr) {
 
     $i = 0;
     foreach ($attachments as $id => $attachment) {
-        $link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
+// No link to Attachment photo
+        $link = wp_get_attachment_image($id, 'full');
+// Link to Attachement photo        
+//        $link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
         ++$i;
         $output .= "\n\t\t\t<{$itemtag} class='gallery-item";
         ($i == 1) ? $output .= " active" : "";
