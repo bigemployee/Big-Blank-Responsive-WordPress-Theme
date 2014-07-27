@@ -907,12 +907,7 @@ figure.alignright figcaption{
 #wpadminbar{
     min-height: 32px;
 }
-#site-header{
-    position: relative;
-    z-index: 3;
-}
 .site-header{
-    /*background-color: #fcfcfc;*/
     max-width: 1260px;
     position: relative;
     width: 100%;
@@ -1055,19 +1050,6 @@ figure.alignright figcaption{
 #nav .menu > li:last-child{
     margin-right: 0;
 }
-#nav .menu > li:last-child > a{
-    padding: 0 10px;
-    border: 1px solid #444;
-    margin-top: -1px; /* Fix 1px border push down */
-}
-#nav .menu > li:last-child > a:hover{
-    border: 1px solid #c00;
-}
-#nav .menu > li.current_page_item:last-child a,
-#nav .menu > li.current_menu_item:last-child a{
-    border: 1px solid #f4f4f4;
-    border-bottom: 2px solid #c00;
-}
 #nav .menu > li.menu-item-has-children:after{
     content: "\f107";
     float: right;
@@ -1123,9 +1105,6 @@ figure.alignright figcaption{
     width: 48px;
     line-height: 48px;
     font-size: 32px;
-}
-#nav.toggled-on #nav .menu{
-    /*display: block;*/
 }
 /**
  * 6.0 Content
@@ -2066,10 +2045,6 @@ h2:hover a.anchor{
  * 6.12 Contact Page
  * -----------------------------------------------------------------------------
  */
-/**
- * 6.12 Contact Page
- * -----------------------------------------------------------------------------
- */
 #page-contact .entry-content > p:first-of-type:first-letter{
     font-size: inherit;
     line-height: inherit;
@@ -2153,7 +2128,7 @@ div.bigContact .bigContact-halfSize:nth-child(odd){
 }
 /** 
  * Flat jQuery UI Datepicker
-  */
+ */
 /* Reset */
 div.bigContact .ui-datepicker,
 div.bigContact .ui-datepicker table,
