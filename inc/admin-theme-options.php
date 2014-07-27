@@ -4,7 +4,8 @@
  * Comments Settings and Footer Analytics is disabled from theme options due 
  * @see http://make.wordpress.org/themes/guidelines/guidelines-plugin-territory/
  * 
- * Uncomment the code for those settings to include them in your theme options
+ * To add Footer analytics or global comment enable/disable option 
+ * @see https://github.com/bigemployee/BigBlankTheme/blob/master/inc/admin-theme-options.php
  */
 
 /**
@@ -37,10 +38,8 @@ function bigblank_theme_options_init() {
     add_settings_field('social-youtube', __('Youtube', 'bigblank'), 'bigblank_settings_field_youtube', 'theme_options', 'social', array('label_for' => 'social-youtube'));
     add_settings_field('social-pinterest', __('Pinterest', 'bigblank'), 'bigblank_settings_field_pinterest', 'theme_options', 'social', array('label_for' => 'social-pinterest'));
     add_settings_field('layout', __('Default Layout', 'bigblank'), 'bigblank_settings_field_layout', 'theme_options', 'general');
-//    add_settings_field('comments', __('Comment Settings', 'bigblank'), 'bigblank_settings_field_comments', 'theme_options', 'general');
     add_settings_field('footer-copyright', __('Footer Copyright', 'bigblank'), 'bigblank_settings_field_footer_copyright', 'theme_options', 'footer', array('label_for' => 'footer-copyright'));
     add_settings_field('footer-text', __('Footer Text', 'bigblank'), 'bigblank_settings_field_footer_text', 'theme_options', 'footer', array('label_for' => 'footer-text'));
-//    add_settings_field('footer-analytics', __('Analytics JavaScript', 'bigblank'), 'bigblank_settings_field_footer_analytics', 'theme_options', 'footer', array('label_for' => 'footer-analytics'));
 }
 
 add_action('admin_init', 'bigblank_theme_options_init');
@@ -137,11 +136,8 @@ function bigblank_get_default_theme_options() {
         'youtube' => '',
         'pinterest' => '',
         'theme_layout' => 'content-sidebar',
-        'page_comments' => 'on',
-        'post_comments' => 'on',
         'footer_copyright' => __('Copyright', 'bigblank') . ' &copy; ' . date("Y") . ' <a href="' . site_url() . '">' . get_bloginfo('name') . '</a>',
-        'footer_text' => sprintf(__('Proudly powered by %s', 'bigblank'), '<a href="http://wordpress.org">WordPress</a>'),
-//        'footer_analytics' => ''
+        'footer_text' => sprintf(__('Proudly powered by %s', 'bigblank'), '<a href="http://wordpress.org">WordPress</a>')
     );
     return apply_filters('bigblank_default_theme_options', $default_theme_options);
 }
@@ -255,43 +251,6 @@ function bigblank_settings_field_layout() {
 }
 
 /**
- * returns an array of layout options
- */
-function bigblank_comment_options() {
-    $comment_options = array(
-        'page-comments' => array(
-            'key' => 'page_comments',
-            'label' => __('Show Comments on Pages', 'bigblank')
-        ),
-        'post-comments' => array(
-            'key' => 'post_comments',
-            'label' => __('Show Comments on Posts', 'bigblank')
-        )
-    );
-    return apply_filters('bigblank_comment_options', $comment_options);
-}
-
-/**
- * render the default comments setting field
- */
-function bigblank_settings_field_comments() {
-    $options = bigblank_get_theme_options();
-    foreach (bigblank_comment_options() as $comment):
-        ?>
-        <div class="commnet checkbox-input theme-comment">
-            <label class="description">
-                <input type="checkbox" name="bigblank_theme_options[<?php echo esc_attr($comment['key']) ?>]"
-                       <?php checked($options[$comment['key']], 'on'); ?>  />
-                <span>
-                    <?php echo $comment['label']; ?>
-                </span>
-            </label>
-        </div>
-        <?php
-    endforeach;
-}
-
-/**
  * render the footer copyright settings field
  */
 function bigblank_settings_field_footer_copyright() {
@@ -308,16 +267,6 @@ function bigblank_settings_field_footer_text() {
     $options = bigblank_get_theme_options();
     ?>
     <input type="text" class="large-text" id="footer-text" name="bigblank_theme_options[footer_text]" value="<?php echo esc_attr($options['footer_text']); ?>" />
-    <?php
-}
-
-/**
- * render the footer Analytics Javascript
- */
-function bigblank_settings_field_footer_analytics() {
-    $options = bigblank_get_theme_options();
-    ?>
-    <textarea class="large-text" rows="5" id="footer-analytics" name="bigblank_theme_options[footer_analytics]"/><?php echo esc_attr($options['footer_analytics']); ?></textarea>
     <?php
 }
 
@@ -375,36 +324,11 @@ function bigblank_theme_options_validate($input) {
     if (isset($input['theme_layout']) && array_key_exists($input['theme_layout'], bigblank_layouts())) {
         $output['theme_layout'] = $input['theme_layout'];
     }
-//    if (array_key_exists('page_comments', $input)) {
-//        $output['page_comments'] = $input['page_comments'];
-//    } else {
-//        $output['page_comments'] = '';
-//    }
-//    if (array_key_exists('post_comments', $input)) {
-//        $output['post_comments'] = $input['post_comments'];
-//    } else {
-//        $output['post_comments'] = '';
-//    }
     if (isset($input['footer_copyright'])) {
         $output['footer_copyright'] = $input['footer_copyright'];
     }
     if (isset($input['footer_text'])) {
         $output['footer_text'] = $input['footer_text'];
     }
-//    if (isset($input['footer_analytics'])) {
-//        $output['footer_analytics'] = $input['footer_analytics'];
-//    }
-
     return apply_filters('bigblank_theme_options_validate', $output, $input, $defaults);
 }
-
-/**
- * Execute Analytics code further down the page
- * @link https://codex.wordpress.org/Plugin_API/Action_Reference/wp_footer
- */
-function bigblank_theme_options_render_analytics() {
-    $options = bigblank_get_theme_options();
-    echo $options['footer_analytics'];
-}
-
-//add_action('wp_footer', 'bigblank_theme_options_render_analytics', 100);

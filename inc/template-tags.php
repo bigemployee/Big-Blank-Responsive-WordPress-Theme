@@ -35,7 +35,6 @@ if (!function_exists('bigblank_main_menu')) :
         wp_nav_menu(array(
             'menu' => 'main_menu',
             'theme_location' => 'main_menu',
-//            'container' => 'nav',
             'depth' => 2,
             'fallback_cb' => 'bigblank_menu_fallback',
             'container_id' => 'menu'
@@ -71,9 +70,8 @@ if (!function_exists('bigblank_menu_fallback')) :
         $menus = wp_get_nav_menus();
         if (!empty($menus)) {
             return wp_nav_menu(array(
-                'container' => 'nav',
                 'depth' => 2,
-                'container_id' => 'nav'
+                'container_id' => 'menu'
             ));
         }
     }
@@ -378,58 +376,3 @@ if (!function_exists('bigblank_has_sidebar')) :
     }
 
 endif;
-
-/**
- * Check theme options for comments settings, and overwrite comments open
- * @link https://codex.wordpress.org/Function_Reference/comments_open
- * 
- * 
- * @param bool        $open    Whether the current post is open for comments.
- * @param int|WP_Post $post_id The post ID or WP_Post object.
- * @return boolean
- */
-function bigblank_comments_open($open, $post_id) {
-    $post = get_post($post_id);
-    $options = bigblank_get_theme_options();
-
-    if ('page' == $post->post_type) {
-        $comments = $options['page_comments'];
-    } else {
-        $comments = $options['post_comments'];
-    }
-    if ($comments !== 'on') {
-        $open = false;
-    }
-    return $open;
-}
-
-add_filter('comments_open', 'bigblank_comments_open', 10, 2);
-
-/**
- * Social Media Share Buttons Template Inspired by Ghost Kasper Theme
- * @param string    $url    link to share
- * @param string    $title  the post title to be shared
- * @link https://github.com/rosario/kasper
- */
-function bigblank_share_post($url, $title) {
-    ?>
-    <section class="share">
-        <h5>Share</h5>
-        <a class="fa fa-twitter fa-lg" href="http://twitter.com/share?text=<?php echo urlencode($title) ?>&amp;url=<?php echo urlencode($url) ?>"
-           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');
-                        return false;">
-            <span class="screen-reader-text">Twitter</span>
-        </a>
-        <a class="fa fa-facebook-square fa-lg" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($url) ?>"
-           onclick="window.open(this.href, 'facebook-share', 'width=580,height=296');
-                        return false;">
-            <span class="screen-reader-text">Facebook</span>
-        </a>
-        <a class="fa fa-google-plus-square fa-lg" href="https://plus.google.com/share?url=<?php echo urlencode($url) ?>"
-           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');
-                       return false;">
-            <span class="screen-reader-text">Google+</span>
-        </a>
-    </section>
-    <?php
-}

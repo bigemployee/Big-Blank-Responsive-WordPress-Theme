@@ -22,10 +22,6 @@
         ?>
     </div><!-- .entry-content -->
     <footer class="entry-meta">
-        <?php 
-        // Uncomment the following line to use Social Media Share Buttons
-        // bigblank_share_post(get_permalink(), get_the_title()); 
-        ?>
         <?php edit_post_link(__('Edit', 'bigblank')); ?>
     </footer><!-- .entry-meta -->
 </article><!-- #post-## -->

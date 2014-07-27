@@ -47,11 +47,11 @@ projects put together:
 
 Changelog
 -------------------------------------------------------------------
-**v2.0-Alpha (2014-04-25)**
+**v1.3 (2014-07-26)**
   - Let's start again
-  - Based on BigBlank && Twenty Fourteen
+  - Based on BigBlank2 && Twenty Fourteen
   - Entire rewrite of BigBlank
-  - Delete key friendly, and well commented code
+  - Schema
 
 **v1.2.2 (2013-12-12)**
   - Fallback menu support

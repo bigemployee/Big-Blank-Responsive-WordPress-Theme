@@ -29,7 +29,7 @@
  *
  */
 if (!isset($content_width)) {
-    $content_width = 960;
+    $content_width = 1440;
 }
 /**
  * Big Blank only works in WordPress 3.8 or later.
@@ -188,8 +188,8 @@ require_once(get_template_directory() . '/inc/widget-call-to-action.php');
 require_once(get_template_directory() . '/inc/widgets-sidebars.php');
 
 // Custom post types & Taxanomies
-//require_once(get_template_directory() . '/inc/custom-post-types.php');
-//require_once(get_template_directory() . '/inc/custom-taxanomies.php');
+require_once(get_template_directory() . '/inc/custom-post-types.php');
+require_once(get_template_directory() . '/inc/custom-taxanomies.php');
 
 // Filters and functions to manipulate content
 require_once(get_template_directory() . '/inc/filters.php');
