@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Big Blank 2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/bigblank\n"
-"POT-Creation-Date: 2014-05-26 03:37-0800\n"
-"PO-Revision-Date: 2014-05-26 03:37-0800\n"
+"POT-Creation-Date: 2014-07-26 22:33-0800\n"
+"PO-Revision-Date: 2014-07-26 22:33-0800\n"
 "Last-Translator: Norik Davtian <@NorikDavtian>\n"
 "Language-Team: Big Employee <@NorikDavtian>\n"
 "Language: en\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -110,8 +110,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:26 content-profile.php:37 content-team.php:16
-#: content-team.php:48 content.php:28 image.php:22 page-contact.php:26
+#: content-page.php:25 content.php:28 image.php:22 page-contact.php:29
 #: page-templates/forms.php:20 page-templates/home.php:17
 msgid "Edit"
 msgstr ""
@@ -133,20 +132,20 @@ msgstr ""
 msgid "Continue Reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content.php:52 content.php:55
+#: content.php:51 content.php:54
 msgid ", "
 msgstr ""
 
-#: content.php:59
+#: content.php:58
 msgid "Sticky"
 msgstr ""
 
-#: content.php:68
+#: content.php:67
 #, php-format
 msgid "About %s"
 msgstr ""
 
-#: content.php:71
+#: content.php:70
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
@@ -176,11 +175,11 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: header.php:32
+#: header.php:31
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:33
+#: header.php:32
 msgid "Skip to content"
 msgstr ""
 
@@ -204,15 +203,15 @@ msgstr ""
 msgid "Display Site Title &amp; Tagline"
 msgstr ""
 
-#: inc/admin-customizer.php:28 inc/admin-theme-options.php:23
+#: inc/admin-customizer.php:28 inc/admin-theme-options.php:27
 msgid "Contact Settings"
 msgstr ""
 
-#: inc/admin-customizer.php:37 inc/admin-theme-options.php:28
+#: inc/admin-customizer.php:37 inc/admin-theme-options.php:32
 msgid "Phone Number"
 msgstr ""
 
-#: inc/admin-customizer.php:47 inc/admin-theme-options.php:29
+#: inc/admin-customizer.php:47 inc/admin-theme-options.php:33
 msgid "Address"
 msgstr ""
 
@@ -220,27 +219,27 @@ msgstr ""
 msgid "Social Links"
 msgstr ""
 
-#: inc/admin-customizer.php:63 inc/admin-theme-options.php:30
+#: inc/admin-customizer.php:63 inc/admin-theme-options.php:34
 msgid "Twitter"
 msgstr ""
 
-#: inc/admin-customizer.php:73 inc/admin-theme-options.php:31
+#: inc/admin-customizer.php:73 inc/admin-theme-options.php:35
 msgid "Facebook"
 msgstr ""
 
-#: inc/admin-customizer.php:83 inc/admin-theme-options.php:32
+#: inc/admin-customizer.php:83 inc/admin-theme-options.php:36
 msgid "Google+"
 msgstr ""
 
-#: inc/admin-customizer.php:93 inc/admin-theme-options.php:33
+#: inc/admin-customizer.php:93 inc/admin-theme-options.php:37
 msgid "Instagram"
 msgstr ""
 
-#: inc/admin-customizer.php:103 inc/admin-theme-options.php:34
+#: inc/admin-customizer.php:103 inc/admin-theme-options.php:38
 msgid "Youtube"
 msgstr ""
 
-#: inc/admin-customizer.php:113 inc/admin-theme-options.php:35
+#: inc/admin-customizer.php:113 inc/admin-theme-options.php:39
 msgid "Pinterest"
 msgstr ""
 
@@ -248,7 +247,7 @@ msgstr ""
 msgid "Layout"
 msgstr ""
 
-#: inc/admin-customizer.php:144 inc/admin-theme-options.php:26
+#: inc/admin-customizer.php:144 inc/admin-theme-options.php:30
 msgid "Footer Settings"
 msgstr ""
 
@@ -256,7 +255,7 @@ msgstr ""
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/admin-customizer.php:163 inc/admin-theme-options.php:39
+#: inc/admin-customizer.php:163 inc/admin-theme-options.php:42
 msgid "Footer Text"
 msgstr ""
 
@@ -304,83 +303,75 @@ msgstr ""
 msgid "Danger"
 msgstr ""
 
-#: inc/admin-theme-options.php:24
+#: inc/admin-theme-options.php:28
 msgid "Social Media Links"
 msgstr ""
 
-#: inc/admin-theme-options.php:25
+#: inc/admin-theme-options.php:29
 msgid "General Layout Settings"
 msgstr ""
 
-#: inc/admin-theme-options.php:36
+#: inc/admin-theme-options.php:40
 msgid "Default Layout"
 msgstr ""
 
-#: inc/admin-theme-options.php:37
-msgid "Comment Settings"
-msgstr ""
-
-#: inc/admin-theme-options.php:38
+#: inc/admin-theme-options.php:41
 msgid "Footer Copyright"
 msgstr ""
 
-#: inc/admin-theme-options.php:40
-msgid "Analytics JavaScript"
-msgstr ""
-
-#: inc/admin-theme-options.php:59 inc/admin-theme-options.php:60
+#: inc/admin-theme-options.php:61 inc/admin-theme-options.php:62
 msgid "Theme Options"
 msgstr ""
 
-#: inc/admin-theme-options.php:77
+#: inc/admin-theme-options.php:79
 msgid "Few notes about these Theme Options:"
 msgstr ""
 
-#: inc/admin-theme-options.php:78
+#: inc/admin-theme-options.php:80
 msgid "Page and Post layout settings overwrite these Theme Option settings."
 msgstr ""
 
-#: inc/admin-theme-options.php:79
+#: inc/admin-theme-options.php:81
 msgid ""
 "Comment settings in Theme Options overwrite the individual Page and Post "
 "settings:"
 msgstr ""
 
-#: inc/admin-theme-options.php:80
+#: inc/admin-theme-options.php:82
 msgid ""
 "Remember to click \"Save Changes\" to save any changes you have made to the "
 "theme options."
 msgstr ""
 
-#: inc/admin-theme-options.php:82
+#: inc/admin-theme-options.php:84
 msgid "For more information:"
 msgstr ""
 
-#: inc/admin-theme-options.php:83
+#: inc/admin-theme-options.php:85
 msgid ""
 "<a href=\"http://codex.wordpress.org/Appearance_Theme_Options_Screen\" "
 "target=\"_blank\">Documentation on Theme Options</a>"
 msgstr ""
 
-#: inc/admin-theme-options.php:84
+#: inc/admin-theme-options.php:86
 msgid ""
 "<a href=\"http://wordpress.org/support/\" target=\"_blank\">Support Forums</"
 "a>"
 msgstr ""
 
-#: inc/admin-theme-options.php:90
+#: inc/admin-theme-options.php:92
 msgid "Overview"
 msgstr ""
 
-#: inc/admin-theme-options.php:106
+#: inc/admin-theme-options.php:108
 msgid "Content on left"
 msgstr ""
 
-#: inc/admin-theme-options.php:111
+#: inc/admin-theme-options.php:113
 msgid "Content on right"
 msgstr ""
 
-#: inc/admin-theme-options.php:116
+#: inc/admin-theme-options.php:118
 msgid "One-column, no sidebar"
 msgstr ""
 
@@ -393,46 +384,38 @@ msgstr ""
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: inc/admin-theme-options.php:261
-msgid "Show Comments on Pages"
-msgstr ""
-
-#: inc/admin-theme-options.php:265
-msgid "Show Comments on Posts"
-msgstr ""
-
-#: inc/admin-theme-options.php:329
+#: inc/admin-theme-options.php:281
 #, php-format
 msgid "%s Options"
 msgstr ""
 
-#: inc/admin-theme-plugins.php:103 inc/class-tgm-plugin-activation.php:196
+#: inc/admin-theme-plugins.php:85 inc/class-tgm-plugin-activation.php:196
 msgid "Install Required Plugins"
 msgstr ""
 
-#: inc/admin-theme-plugins.php:104 inc/class-tgm-plugin-activation.php:197
+#: inc/admin-theme-plugins.php:86 inc/class-tgm-plugin-activation.php:197
 msgid "Install Plugins"
 msgstr ""
 
-#: inc/admin-theme-plugins.php:105 inc/class-tgm-plugin-activation.php:198
+#: inc/admin-theme-plugins.php:87 inc/class-tgm-plugin-activation.php:198
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: inc/admin-theme-plugins.php:106
+#: inc/admin-theme-plugins.php:88
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: inc/admin-theme-plugins.php:117 inc/class-tgm-plugin-activation.php:210
+#: inc/admin-theme-plugins.php:99 inc/class-tgm-plugin-activation.php:210
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: inc/admin-theme-plugins.php:118 inc/class-tgm-plugin-activation.php:212
+#: inc/admin-theme-plugins.php:100 inc/class-tgm-plugin-activation.php:212
 #: inc/class-tgm-plugin-activation.php:1948
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: inc/admin-theme-plugins.php:119
+#: inc/admin-theme-plugins.php:101
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
@@ -622,133 +605,44 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/custom-post-types.php:14 inc/custom-post-types.php:15
-#: inc/custom-post-types.php:26
-msgid "Team"
-msgstr ""
-
-#: inc/custom-post-types.php:16
-msgid "Add New"
-msgstr ""
-
-#: inc/custom-post-types.php:17
-msgid "Add New Profile"
-msgstr ""
-
-#: inc/custom-post-types.php:18
-msgid "Edit Profile"
-msgstr ""
-
-#: inc/custom-post-types.php:19
-msgid "New Profile"
-msgstr ""
-
-#: inc/custom-post-types.php:20
-msgid "All Profiles"
-msgstr ""
-
-#: inc/custom-post-types.php:21
-msgid "View Profile"
-msgstr ""
-
-#: inc/custom-post-types.php:22
-msgid "Search Profiles"
-msgstr ""
-
-#: inc/custom-post-types.php:23
-msgid "No profile was found"
-msgstr ""
-
-#: inc/custom-post-types.php:24
-msgid "No profile was found in Trash"
-msgstr ""
-
-#: inc/custom-taxanomies.php:14 inc/custom-taxanomies.php:28
-msgid "Departments"
-msgstr ""
-
-#: inc/custom-taxanomies.php:15
-msgid "Department"
-msgstr ""
-
-#: inc/custom-taxanomies.php:16
-msgid "Search Departments"
-msgstr ""
-
-#: inc/custom-taxanomies.php:17
-msgid "All Departments"
-msgstr ""
-
-#: inc/custom-taxanomies.php:18
-msgid "Parent Department"
-msgstr ""
-
-#: inc/custom-taxanomies.php:19
-msgid "Parent Department:"
-msgstr ""
-
-#: inc/custom-taxanomies.php:20
-msgid "Edit Department"
-msgstr ""
-
-#: inc/custom-taxanomies.php:21
-msgid "Update Department"
-msgstr ""
-
-#: inc/custom-taxanomies.php:22
-msgid "Add New Department"
-msgstr ""
-
-#: inc/custom-taxanomies.php:23
-msgid "New Department Name"
-msgstr ""
-
-#: inc/custom-taxanomies.php:25
-msgid "Add or remove departments"
-msgstr ""
-
-#: inc/custom-taxanomies.php:27
-msgid "No department was found."
-msgstr ""
-
 #: inc/filters.php:140
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:133
+#: inc/template-tags.php:131
 msgid "&larr; Previous"
 msgstr ""
 
-#: inc/template-tags.php:134
+#: inc/template-tags.php:132
 msgid "Next &rarr;"
 msgstr ""
 
-#: inc/template-tags.php:139
+#: inc/template-tags.php:137
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:171
+#: inc/template-tags.php:169
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:175
+#: inc/template-tags.php:173
 msgid "<span class=\"meta-nav\">Published In</span>%title"
 msgstr ""
 
-#: inc/template-tags.php:177
+#: inc/template-tags.php:175
 msgid "<span class=\"meta-nav\">Previous Post</span>%title"
 msgstr ""
 
-#: inc/template-tags.php:178
+#: inc/template-tags.php:176
 msgid "<span class=\"meta-nav\">Next Post</span>%title"
 msgstr ""
 
-#: inc/template-tags.php:316
+#: inc/template-tags.php:315
 msgid "Post Layout"
 msgstr ""
 
-#: inc/template-tags.php:317
+#: inc/template-tags.php:316
 msgid "Page Layout"
 msgstr ""
 
@@ -813,18 +707,10 @@ msgid "This \"Call to Action\" area appears after our content"
 msgstr ""
 
 #: inc/widgets-sidebars.php:66
-msgid "Newsletter"
-msgstr ""
-
-#: inc/widgets-sidebars.php:67
-msgid "Newsletter widget appears in footer section on every page."
-msgstr ""
-
-#: inc/widgets-sidebars.php:77
 msgid "Footer"
 msgstr ""
 
-#: inc/widgets-sidebars.php:78
+#: inc/widgets-sidebars.php:67
 msgid "Footer widget area"
 msgstr ""
 

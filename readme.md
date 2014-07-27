@@ -52,6 +52,7 @@ Changelog
   - Based on BigBlank2 && Twenty Fourteen
   - Entire rewrite of BigBlank
   - Schema
+  - Removed plugin territory code (Check BigBlank2 for extra features)
 
 **v1.2.2 (2013-12-12)**
   - Fallback menu support
