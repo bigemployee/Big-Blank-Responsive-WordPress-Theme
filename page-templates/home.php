@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Home
- *
+ * 
  */
 get_header();
 ?>
@@ -18,12 +18,7 @@ get_header();
                 </div><!-- .entry-content -->
             </article><!-- #content -->
         <?php endwhile; ?>
-    <?php if (is_active_sidebar('call2action') && 
-            (is_single() || is_page()) &&
-            !is_page('contact') &&
-            !is_page('team') &&
-            !is_singular('team') &&
-            !is_page('about')) : ?>
+    <?php if (is_active_sidebar('call2action') && is_front_page()) : ?>
         <?php dynamic_sidebar('call2action'); ?>
     <?php endif; ?>
     </div><!-- #main -->
