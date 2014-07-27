@@ -1,0 +1,70 @@
+/*
+Theme Name: Big Blank
+Description: Adds support for languages written in a Right To Left (RTL) direction.
+It's easy, just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+See http://codex.wordpress.org/Right_to_Left_Language_Support
+*/
+
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+.entry-content ol ol,
+.entry-content ol ul,
+.entry-content ul ol,
+.entry-content ul ul{
+    padding: 0 0 0 0.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-content .entry-header,
+.site-content table,
+.site-content form,
+.site-content p,
+.site-content dl,
+.entry-content ol,
+.entry-content ul,
+.gallery,
+.site-content pre,
+.site-content address,
+.site-content .entry-summary,
+.site-content .entry-meta,
+.site-content .wp-video,
+.site-content .hentry .wp-audio-shortcode,
+.page-content,
+.author-description,
+.team-member,
+#comments,
+.gallery-caption,
+#footer-nav ul,
+caption,
+th,
+td {
+    text-align: right;
+}
+/* just reset to original since most RTL languages don't have Drop Caps */
+.post .entry-content > p:first-of-type:first-letter{
+    font-size: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+    font-weight: inherit;
+    float: none;
+    margin: auto;
+}
+
+@media screen and (max-width: 480px) {
+    #nav .menu li,
+    #nav .menu li a{
+        float: right;
+        text-align: right;
+    }
+    #nav .menu li li a{
+        padding: 0 25px 0 10px;
+    }
+}

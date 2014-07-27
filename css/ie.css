@@ -1,0 +1,24 @@
+/**
+ * Global Styles for older IE versions (previous to IE9).
+ */
+button,
+input,
+select,
+textarea {
+    vertical-align: middle;
+}
+
+/**
+ * Internet Explorer 8
+ */
+
+.ie8 img.size-full,
+.ie8 img.size-large,
+.ie8 img.header-image,
+.ie8 img.wp-post-image,
+.ie8 img[class*="align"],
+.ie8 img[class*="wp-image-"],
+.ie8 img[class*="attachment-"] {
+    height: auto;
+    width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
+}
